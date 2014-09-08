@@ -25,7 +25,7 @@
 
 \maketitle
 
-\block{Introduction}{
+\block{1. Introduction}{
 	\begin{multicols}{3}
 		\input{./intro.tex}
 	\end{multicols}%
@@ -33,31 +33,35 @@
 
 \begin{columns}
 	\column{.4}
-	\block{Parameter file}{%\small
-		%\begin{multicols}{1}
-			\input{./example_param.tex}
-		%\end{multicols}
+	\block{3. Parameter file}{%\small
+		\input{./example_param.tex}
 	}
 	\column{.6}
-	\block{Why textual parameters?}{\input{./why_text_params.tex}}
-	\block{Script calling MaxQuant through mqrun}{
+	\block{2. Why text based parameters?}{
+		\input{./why_text_params.tex}
+	}
+	\block{4. Script calling MaxQuant through mqrun}{
 		\input{./call_mqrun.tex}
 	}
 \end{columns}
 \begin{columns}
 	\column{.5}
-	\block{Generated GUI}{Image?\vspace{18cm}}
+	\block{5. Integrate into UNIX-based workflow systems}{
+		\input{./integrate.tex}
+	}
 	\column{.5}
-	\block{Integrate into UNIX-based workflow systems}{Test\vspace{18cm}}
+	\block{6. Generated GUI}{
+		\input{./gui.tex}
+	}
 \end{columns}
 \begin{columns}
 	\column{.7}
 	\block{Conclusion}{
-		Blubb
+		\input{./conclusion.tex}
 	}
 	\column{.3}
 	\block{References}{
-		Source at github.com/qbicsoftware/mqrun
+		\input{./references.tex}
 	}
 \end{columns}
 \end{document}
