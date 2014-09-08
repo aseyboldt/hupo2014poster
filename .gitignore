@@ -1,0 +1,8 @@
+*~
+*.aux
+*.log
+*.pdf
+*.swp
+call_mqrun.tex
+example_param.tex
+pygmentize_style.tex
