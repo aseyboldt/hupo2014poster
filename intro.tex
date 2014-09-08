@@ -1,0 +1,36 @@
+OMICS technologies are becoming increasingly popular for large-scale data
+generation in biology and medicine. Recently, there have been major
+breakthroughs in the application of workflow systems (e.g.  Galaxy,
+gUSE/WS-PGrade) towards automated analysis of biological high-throughput data.
+Mass spectrometry instrumentation, the core technology in proteomics, provides
+improved sensitivity and throughput for proteomics research. This increasing
+speed of data generation and the growing data amount require automated methods
+for data processing.
+
+MaxQuant is a widely used tool to analyze proteomics data. In its latest
+release it is operated using an interactive graphical user interface (GUI) on
+Windows and is not compatible with Linux, prohibiting easy access from the
+command line or as a library.
+
+%We propose mqrun — a wrapper to integrate MaxQuant workflows into a Linux
+%environment. While previous work focused on the integration into Windows-based
+%workflows, most clusters are Linux based. Making MaxQuant available from Linux
+%broadens its applicability.
+%
+%mqrun is implemented as a Python library that controls a MaxQuant instance on
+%a remote Windows server. The configuration for MaxQuant is specified in a json
+%file that aims to be easy for humans to edit and understand. The supplied
+%json-schema can be used to generate HTML forms or GUIs to allow for
+%integration into existing workflow solutions. The Windows machine can be
+%virtualized on clusters or dedicated servers; only a shared directory between
+%the Linux process and the Windows machine is needed.
+%
+%We implemented tests to show mqrun reliably reports failures and crashes to
+%the client.
+%
+%With mqrun MaxQuant can be integrated into automated workflows on a cluster
+%which allows for chaining with downstream analysis tools (e.g. R). The textual
+%parameter file makes it easier to reproduce results.  By taking advantage of
+%cluster resources, many data analyses can be parallelized, increasing
+%performance and throughput in proteomics research.
+%

@@ -1,0 +1,46 @@
+\documentclass[a0paper]{tikzposter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{fancyvrb}
+
+\setlength{\columnsep}{2em}
+\renewcommand\familydefault{cmss}
+\input{./pygmentize_style.tex}
+
+\title{mqrun -- automate MaxQuant}
+\titlegraphic{\includegraphics{./uni-logo.pdf}}
+
+\usetheme{Board}
+
+\begin{document}
+
+\maketitle
+
+\block{Introduction}{
+	\begin{multicols}{3}
+		\input{./intro.tex}
+	\end{multicols}%
+}
+
+\begin{columns}
+	\column{.6}
+	\block{Parameter file}{\small
+		\begin{multicols}{2}
+			\input{./example_param.tex}
+		\end{multicols}
+	}
+	\column{.4}
+	\block{Why textual parameters?}{\input{./why_text_params.tex}}
+\end{columns}
+\begin{columns}
+	\column{.5}
+	\block{Image}{blubb blubb}
+	\column{.5}
+	\block[titleleft]{Image}{Test\\Test}
+\end{columns}
+\end{document}

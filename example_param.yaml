@@ -1,0 +1,34 @@
+globalParams:
+     defaults: default
+     equalIl: true
+     matchBetweenRuns: true
+     fixedModifications:
+       - "Carbamidomethyl (C)"
+rawFiles:
+   - files:
+       - name: 20090812_SvNa_SA_phospho_2_p1
+         fraction: 1
+     params:
+       defaults: default
+       intensityDependentCalibration: true
+       isotopeTimeCorrelation: 0.8
+       centroidMatchTol: 10
+       ...
+   - files:
+       - name: 20090812_SvNa_SA_phospho_2_FT1
+         fraction: 5
+       - name: 20090812_StPe_SA_phospho_2_10
+         fraction: 11
+     params:
+       defaults: default
+       intensityDependentCalibration: true
+       isotopeTimeCorrelation: 0.8
+       variableModifications:
+         - "Acetyl (Protein N-term)"
+         - "Oxidation (M)"
+         - "Phospho (STY)"
+fastaFiles:
+    fileNames:
+        - uniprot_sprot
+    firstSearch: []
+
