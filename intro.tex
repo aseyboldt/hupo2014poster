@@ -12,18 +12,18 @@ release it is operated using an interactive graphical user interface (GUI) on
 Windows and is not compatible with Linux, prohibiting easy access from the
 command line or as a library.
 
-%We propose mqrun — a wrapper to integrate MaxQuant workflows into a Linux
-%environment. While previous work focused on the integration into Windows-based
-%workflows, most clusters are Linux based. Making MaxQuant available from Linux
-%broadens its applicability.
-%
-%mqrun is implemented as a Python library that controls a MaxQuant instance on
-%a remote Windows server. The configuration for MaxQuant is specified in a json
-%file that aims to be easy for humans to edit and understand. The supplied
-%json-schema can be used to generate HTML forms or GUIs to allow for
-%integration into existing workflow solutions. The Windows machine can be
-%virtualized on clusters or dedicated servers; only a shared directory between
-%the Linux process and the Windows machine is needed.
+We propose mqrun — a wrapper to integrate MaxQuant workflows into a Linux
+environment. While previous work focused on the integration into Windows-based
+workflows, most clusters are Linux based. Making MaxQuant available from Linux
+broadens its applicability.
+
+mqrun is implemented as a Python library that controls a MaxQuant instance on
+a remote Windows server. The configuration for MaxQuant is specified in a json
+file that aims to be easy for humans to edit and understand. The supplied
+json-schema can be used to generate HTML forms or GUIs to allow for
+integration into existing workflow solutions. The Windows machine can be
+virtualized on clusters or dedicated servers; only a shared directory between
+the Linux process and the Windows machine is needed.
 %
 %We implemented tests to show mqrun reliably reports failures and crashes to
 %the client.

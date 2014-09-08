@@ -1,15 +1,19 @@
-\documentclass[a0paper]{tikzposter}
+\documentclass[25pt,a0paper]{tikzposter}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{xcolor}
 \usepackage{fancyvrb}
 
+\usepackage[scale=1.0]{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+%\usepackage{arev}
+
 \setlength{\columnsep}{2em}
-\renewcommand\familydefault{cmss}
+%\renewcommand\familydefault{cmss}
 \input{./pygmentize_style.tex}
 
 \title{mqrun -- automate MaxQuant}
@@ -28,19 +32,32 @@
 }
 
 \begin{columns}
-	\column{.6}
-	\block{Parameter file}{\small
-		\begin{multicols}{2}
-			\input{./example_param.tex}
-		\end{multicols}
-	}
 	\column{.4}
+	\block{Parameter file}{%\small
+		%\begin{multicols}{1}
+			\input{./example_param.tex}
+		%\end{multicols}
+	}
+	\column{.6}
 	\block{Why textual parameters?}{\input{./why_text_params.tex}}
+	\block{Script calling MaxQuant through mqrun}{
+		\input{./call_mqrun.tex}
+	}
 \end{columns}
 \begin{columns}
 	\column{.5}
-	\block{Image}{blubb blubb}
+	\block{Generated GUI}{Image?\vspace{18cm}}
 	\column{.5}
-	\block[titleleft]{Image}{Test\\Test}
+	\block{Integrate into UNIX-based workflow systems}{Test\vspace{18cm}}
+\end{columns}
+\begin{columns}
+	\column{.7}
+	\block{Conclusion}{
+		Blubb
+	}
+	\column{.3}
+	\block{References}{
+		Source at github.com/qbicsoftware/mqrun
+	}
 \end{columns}
 \end{document}
