@@ -1,4 +1,4 @@
-TEX_FILES = intro.tex why_text_params.tex integrate.tex gui.tex conclusion.tex references.tex
+TEX_FILES = intro.tex why_text_params.tex integrate.tex gui.tex conclusion.tex references.tex remote_exec.tex timeings.tex
 PYGMENTIZE_FILES = pygmentize_style.tex example_param.tex call_mqrun.tex
 
 all : poster.pdf

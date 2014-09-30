@@ -1,22 +1,19 @@
 from mqrun import mqclient
-import json
+import yaml
 
-with open('paramfile.json') as f:
-    params = json.load(f)
+with open('paramfile.yaml') as f:
+    params = yaml.load(f)
 
 path_data = {
-    "raw_file1": "/path/to/raw/file",
-    "raw_file2": "/path/to/raw/file2",
+    "inputfile1": "/path/to/raw/file",
+    "inputfile2": "/path/to/raw/file2",
 }
 
-maxquant = mqclient.mqrun(params, path_data, share='/mnt/win_share_requests')
-
-maxquant.wait()
-try:
-    outfiles = maxquant.result()
-except TimeoutError:
-    print("Connection lost or server overloaded")
-except Exception as e:
-    print("Error executing MaxQuant: " + str(e))
-else:
-    print(outfiles)
+for threads in [4, 6, 8, 10]:
+    params['globalParams']['numThreads'] = threads
+    maxquant = mqclient.mqrun(
+        params, path_data, image='path/to/image',
+        outdir='mqoutput_%s' % threads
+    )
+    # wait and throw an exception if MaxQuant failed
+    maxquant.result()

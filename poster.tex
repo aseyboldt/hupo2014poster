@@ -23,48 +23,58 @@
 %\renewcommand\familydefault{cmss}
 \input{./pygmentize_style.tex}
 
-\title{mqrun -- automate MaxQuant}
+\title{mqrun -- Integrating MaxQuant into Linux cluster based workflow systems}
 \titlegraphic{\includegraphics{./uni-logo.pdf}}
 \usetheme{Board}
 
 \begin{document}
 \maketitle
-
-\block{1. Introduction}{
-	\begin{multicols}{3}
-		\input{./intro.tex}
-	\end{multicols}%
-}
-
+% Autoren : Sven, Adrian, David
+% Affiliations: QBiC
+% contakt unten: email ich + sven
+% schrift etwas groesser
+% logo rechts oder links + *kein* QBiC logo
+% Lys4 rechts oben
 \begin{columns}
-	\column{.4}
-	\block{3. Parameter file}{%\small
-		\input{./example_param.tex}
+	\column{.66}
+	\block{Introduction}{
+		\begin{multicols}{2}
+			\input{./intro.tex}
+		\end{multicols}
 	}
-	\column{.6}
-	\block{2. Why text based parameters?}{
+	\column{.33}
+	\block{Textual parameter files}{
 		\input{./why_text_params.tex}
 	}
-	\block{4. Script calling MaxQuant through mqrun}{
+\end{columns}
+\begin{columns}
+	\column{.5}
+	\block{Parameter file}{
+		\input{./example_param.tex}
+	}
+	\column{.5}
+	\block{Script calling MaxQuant through mqrun}{
 		\input{./call_mqrun.tex}
 	}
 \end{columns}
 \begin{columns}
 	\column{.5}
-	\block{5. Remote execution or virtualization}{
-		\input{./remote_exec.tex}
+	\block{VM performance}{
+		\includegraphics[scale=1]{plot.pdf}
 	}
 	\column{.5}
-	\block{6. Integrate into UNIX-based workflow systems}{
+	\block{Demo Web interface}{
 		\input{./integrate.tex}
 	}
 \end{columns}
 \begin{columns}
-	\column{.7}
+	\column{.66}
 	\block{Conclusion}{
-		\input{./conclusion.tex}
+		\begin{multicols}{2}
+			\input{./conclusion.tex}
+		\end{multicols}%
 	}
-	\column{.3}
+	\column{.33}
 	\block{References}{
 		\input{./references.tex}
 	}

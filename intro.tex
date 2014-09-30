@@ -1,23 +1,15 @@
 OMICS technologies are becoming increasingly popular for large-scale data
-generation in biology and medicine. Recently, there have been major
-breakthroughs in the application of workflow systems (e.g.  Galaxy,
-gUSE/WS-PGrade) towards automated analysis of biological high-throughput data.
-Mass spectrometry instrumentation, the core technology in proteomics, provides
-improved sensitivity and throughput for proteomics research. This increasing
-speed of data generation and the growing data amount require automated methods
-for data processing.
+generation in biology and medicine. Mass spectrometry instrumentation, the core
+technology in proteomics, provides improved sensitivity and throughput for
+proteomics research. This increasing speed of data generation and the growing
+data amount require automated methods for data processing.
 
 MaxQuant is a widely used tool to analyze proteomics data. In its latest
 release it is operated using an interactive graphical user interface (GUI) on
 Windows and is not compatible with Linux, prohibiting easy access from the
 command line or as a library.
 
-We propose mqrun — a wrapper to integrate MaxQuant workflows into a Linux
-environment. While previous work focused on the integration into Windows-based
-workflows, most clusters are Linux based.
-
-mqrun is a Python library that controls MaxQuant running on a virtual Windows
-server. The configuration for MaxQuant is specified in a json file that aims to
-be easy for humans to edit and understand. The supplied json-schema can be used
-to generate HTML forms or GUIs to allow for integration into existing workflow
-solutions.
+mqrun starts and controls MaxQuant inside a virtual machine. The configuration
+is specified in a json file that is easy for humans to edit and understand.
+The supplied json-schema can be used to generate web interfaces and integrate
+mqrun into existing workflow systems.
