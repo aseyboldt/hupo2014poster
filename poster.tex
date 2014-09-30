@@ -1,15 +1,22 @@
 \documentclass[25pt,a0paper]{tikzposter}
 
+% real size: in okular at zoom 147%
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%\usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{xcolor}
 \usepackage{fancyvrb}
 
-\usepackage[scale=1.0]{tgheros}
-\renewcommand*\familydefault{\sfdefault}
+% bold font for lmodern
+%\usepackage{lmodern}
+%\renewcommand{\seriesdefault}{\bfdefault}
+\usepackage{tgpagella}
+
+%\usepackage{tgheros}
+%\renewcommand*\familydefault{\sfdefault}
+
 %\usepackage{arev}
 
 \setlength{\columnsep}{2em}
@@ -18,11 +25,9 @@
 
 \title{mqrun -- automate MaxQuant}
 \titlegraphic{\includegraphics{./uni-logo.pdf}}
-
 \usetheme{Board}
 
 \begin{document}
-
 \maketitle
 
 \block{1. Introduction}{
@@ -46,12 +51,12 @@
 \end{columns}
 \begin{columns}
 	\column{.5}
-	\block{5. Integrate into UNIX-based workflow systems}{
-		\input{./integrate.tex}
+	\block{5. Remote execution or virtualization}{
+		\input{./remote_exec.tex}
 	}
 	\column{.5}
-	\block{6. Generated GUI}{
-		\input{./gui.tex}
+	\block{6. Integrate into UNIX-based workflow systems}{
+		\input{./integrate.tex}
 	}
 \end{columns}
 \begin{columns}
